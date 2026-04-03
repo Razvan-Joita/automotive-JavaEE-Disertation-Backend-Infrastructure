@@ -1,0 +1,45 @@
+{
+  "annotations": {
+    "list": []
+  },
+  "editable": true,
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "HTTP requests (list endpoints)",
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "targets": [
+        {
+          "expr": "{__name__=~'.*_list_count_total|.*_list_count'}",
+          "legendFormat": "{{__name__}}",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Request timing",
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 8
+      },
+      "targets": [
+        {
+          "expr": "{__name__=~'.*_list_time_seconds_count|.*_list_time'}",
+          "legendFormat": "{{__name__}}",
+          "refId": "A"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 39,
+  "title": "Automotive JavaEE Overview",
+  "version": 1
+}

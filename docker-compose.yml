@@ -1,0 +1,79 @@
+
+services:
+  mysql:
+    image: mysql:8.0.36
+    container_name: automotive-javaee-mysql-v2
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: automotiveJavaEE
+      MYSQL_USER: automotive
+      MYSQL_PASSWORD: Jabulani2002@
+    ports:
+      - "3311:3306"
+    volumes:
+      - mysql_javaee_v2_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+    networks:
+      - automotive_javaee_v2_network
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: automotive-javaee-app-v2
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/automotiveJavaEE?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      DB_USER: automotive
+      DB_PASSWORD: Jabulani2002@
+    ports:
+      - "8087:8080"
+    networks:
+      - automotive_javaee_v2_network
+
+  prometheus:
+    image: prom/prometheus:v2.54.1
+    container_name: automotive-javaee-prometheus-v2
+    depends_on:
+      - app
+    ports:
+      - "9094:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_javaee_v2_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    networks:
+      - automotive_javaee_v2_network
+
+  grafana:
+    image: grafana/grafana:11.2.2
+    container_name: automotive-javaee-grafana-v2
+    depends_on:
+      - prometheus
+    ports:
+      - "3004:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+    volumes:
+      - grafana_javaee_v2_data:/var/lib/grafana
+      - ./docker/grafana/provisioning:/etc/grafana/provisioning
+    networks:
+      - automotive_javaee_v2_network
+
+volumes:
+  mysql_javaee_v2_data:
+  prometheus_javaee_v2_data:
+  grafana_javaee_v2_data:
+
+networks:
+  automotive_javaee_v2_network:
+    driver: bridge
