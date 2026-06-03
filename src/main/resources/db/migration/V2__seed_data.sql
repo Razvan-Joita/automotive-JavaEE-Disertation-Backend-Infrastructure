@@ -1,4 +1,3 @@
-
 INSERT INTO manufacturer(name, country) VALUES ('Toyota', 'Japan'), ('BMW', 'Germany');
 INSERT INTO dealership(name, location) VALUES ('City Motors', 'Bucharest'), ('Auto Hub', 'Cluj-Napoca');
 INSERT INTO customer(first_name, last_name, email) VALUES ('Ana', 'Popescu', 'ana.popescu@example.com'), ('Mihai', 'Ionescu', 'mihai.ionescu@example.com');

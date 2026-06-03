@@ -1,4 +1,3 @@
-
 package com.automotive.javaee.exception;
 
 import jakarta.ws.rs.core.MediaType;

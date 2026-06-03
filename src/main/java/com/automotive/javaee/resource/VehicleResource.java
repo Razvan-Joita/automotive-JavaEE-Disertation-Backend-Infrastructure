@@ -15,7 +15,7 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import java.net.URI;
 import java.util.List;
 
-@Path("/vehicles")
+@Path("/v1/vehicles")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 @Tag(name = "Vehicle")

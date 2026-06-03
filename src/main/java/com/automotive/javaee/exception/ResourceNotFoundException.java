@@ -1,4 +1,3 @@
-
 package com.automotive.javaee.exception;
 
 public class ResourceNotFoundException extends RuntimeException {
