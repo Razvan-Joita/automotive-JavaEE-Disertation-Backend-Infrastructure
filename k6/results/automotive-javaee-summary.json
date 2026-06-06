@@ -1,0 +1,430 @@
+{
+  "options": {
+    "summaryTrendStats": [
+      "avg",
+      "min",
+      "med",
+      "p(90)",
+      "p(95)",
+      "p(99)",
+      "max"
+    ],
+    "summaryTimeUnit": "",
+    "noColor": false
+  },
+  "state": {
+    "testRunDurationMs": 125038.821727,
+    "isStdOutTTY": false,
+    "isStdErrTTY": false
+  },
+  "metrics": {
+    "http_req_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(99)": 9.483385079999996,
+        "max": 34.20112,
+        "avg": 5.020787802507827,
+        "min": 3.210767,
+        "med": 4.546444,
+        "p(90)": 6.5918834,
+        "p(95)": 7.346066799999997
+      },
+      "thresholds": {
+        "p(95)<750": {
+          "ok": true
+        },
+        "p(99)<1500": {
+          "ok": true
+        }
+      }
+    },
+    "vus_max": {
+      "contains": "default",
+      "values": {
+        "value": 10,
+        "min": 10,
+        "max": 10
+      },
+      "type": "gauge"
+    },
+    "data_sent": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "count": 123018,
+        "rate": 983.8384455396413
+      }
+    },
+    "checks": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 1,
+        "passes": 1914,
+        "fails": 0
+      },
+      "thresholds": {
+        "rate>0.95": {
+          "ok": true
+        }
+      }
+    },
+    "automotive_javaee_api_latency": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(90)": 6.5918834,
+        "p(95)": 7.346066799999997,
+        "p(99)": 9.483385079999996,
+        "max": 34.20112,
+        "avg": 5.020787802507827,
+        "min": 3.210767,
+        "med": 4.546444
+      }
+    },
+    "data_received": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "count": 375927,
+        "rate": 3006.4822653301203
+      }
+    },
+    "http_req_duration{expected_response:true}": {
+      "values": {
+        "avg": 5.020787802507827,
+        "min": 3.210767,
+        "med": 4.546444,
+        "p(90)": 6.5918834,
+        "p(95)": 7.346066799999997,
+        "p(99)": 9.483385079999996,
+        "max": 34.20112
+      },
+      "type": "trend",
+      "contains": "time"
+    },
+    "http_req_blocked": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "med": 0.00525,
+        "p(90)": 0.0090294,
+        "p(95)": 0.013319199999999991,
+        "p(99)": 0.4538627599999518,
+        "max": 2.078004,
+        "avg": 0.02141249425287363,
+        "min": 0.003717
+      }
+    },
+    "iteration_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(90)": 11077.1475014,
+        "p(95)": 11080.6864884,
+        "p(99)": 11101.82232552,
+        "max": 11174.582985,
+        "avg": 11064.534031781608,
+        "min": 11050.449769,
+        "med": 11060.626038
+      }
+    },
+    "http_req_waiting": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 4.912828598746077,
+        "min": 3.116013,
+        "med": 4.430974,
+        "p(90)": 6.4837302,
+        "p(95)": 7.231891799999996,
+        "p(99)": 9.389582279999997,
+        "max": 34.104292
+      }
+    },
+    "http_req_failed": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "passes": 0,
+        "fails": 957,
+        "rate": 0
+      },
+      "thresholds": {
+        "rate<0.05": {
+          "ok": true
+        }
+      }
+    },
+    "http_req_tls_handshaking": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "max": 0,
+        "avg": 0,
+        "min": 0,
+        "med": 0,
+        "p(90)": 0,
+        "p(95)": 0,
+        "p(99)": 0
+      }
+    },
+    "http_req_sending": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 0.03132647230929988,
+        "min": 0.011973,
+        "med": 0.029938,
+        "p(90)": 0.04547199999999999,
+        "p(95)": 0.05314299999999998,
+        "p(99)": 0.06799883999999996,
+        "max": 0.102468
+      }
+    },
+    "http_req_receiving": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(90)": 0.097581,
+        "p(95)": 0.11525099999999998,
+        "p(99)": 0.1394184,
+        "max": 0.182513,
+        "avg": 0.07663273145245568,
+        "min": 0.05149,
+        "med": 0.071739
+      }
+    },
+    "vus": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "value": 1,
+        "min": 1,
+        "max": 10
+      }
+    },
+    "group_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 11064.46622210345,
+        "min": 11050.395966,
+        "med": 11060.572926,
+        "p(90)": 11077.0850828,
+        "p(95)": 11080.5835921,
+        "p(99)": 11101.72516022,
+        "max": 11174.528609
+      }
+    },
+    "http_req_connecting": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(90)": 0,
+        "p(95)": 0,
+        "p(99)": 0.3734561599999498,
+        "max": 1.7134,
+        "avg": 0.012983019853709508,
+        "min": 0,
+        "med": 0
+      }
+    },
+    "http_reqs": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 957,
+        "rate": 7.653622985103291
+      }
+    },
+    "iterations": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 87,
+        "rate": 0.6957839077366629
+      }
+    },
+    "automotive_javaee_api_success": {
+      "contains": "default",
+      "values": {
+        "rate": 1,
+        "passes": 957,
+        "fails": 0
+      },
+      "type": "rate"
+    }
+  },
+  "root_group": {
+    "name": "",
+    "path": "",
+    "id": "d41d8cd98f00b204e9800998ecf8427e",
+    "groups": [
+      {
+        "path": "::read automotive JavaEE API endpoints",
+        "id": "6d2fab32e45338bdf9945339d9cb2a8b",
+        "groups": [],
+        "checks": [
+            {
+              "passes": 87,
+              "fails": 0,
+              "name": "/v1/customers status is 2xx",
+              "path": "::read automotive JavaEE API endpoints::/v1/customers status is 2xx",
+              "id": "5877ee5d97a08700ca49fe73ffdf276c"
+            },
+            {
+              "name": "/v1/customers returns content",
+              "path": "::read automotive JavaEE API endpoints::/v1/customers returns content",
+              "id": "e4d84dd22d60d65a6b6fb4f3e24f0488",
+              "passes": 87,
+              "fails": 0
+            },
+            {
+              "id": "8badc04b26cb071c1ada956fb2fa4a63",
+              "passes": 87,
+              "fails": 0,
+              "name": "/v1/dealerships status is 2xx",
+              "path": "::read automotive JavaEE API endpoints::/v1/dealerships status is 2xx"
+            },
+            {
+              "name": "/v1/dealerships returns content",
+              "path": "::read automotive JavaEE API endpoints::/v1/dealerships returns content",
+              "id": "e9c8cee2fa5cc8eaf8d3cad402108d29",
+              "passes": 87,
+              "fails": 0
+            },
+            {
+              "passes": 87,
+              "fails": 0,
+              "name": "/v1/manufacturers status is 2xx",
+              "path": "::read automotive JavaEE API endpoints::/v1/manufacturers status is 2xx",
+              "id": "e952b81e64b53fc734e0731fcfb5d68f"
+            },
+            {
+              "path": "::read automotive JavaEE API endpoints::/v1/manufacturers returns content",
+              "id": "d71727fc4816d9d5cf13ab4bd2919cca",
+              "passes": 87,
+              "fails": 0,
+              "name": "/v1/manufacturers returns content"
+            },
+            {
+              "id": "4337a348c09ce272e47fc9c6560deac3",
+              "passes": 87,
+              "fails": 0,
+              "name": "/v1/vehicles status is 2xx",
+              "path": "::read automotive JavaEE API endpoints::/v1/vehicles status is 2xx"
+            },
+            {
+              "name": "/v1/vehicles returns content",
+              "path": "::read automotive JavaEE API endpoints::/v1/vehicles returns content",
+              "id": "b6114215e2e3adbada077d73bddf28d8",
+              "passes": 87,
+              "fails": 0
+            },
+            {
+              "path": "::read automotive JavaEE API endpoints::/v1/employees status is 2xx",
+              "id": "a3ec33890a6e11a62169999dc432f386",
+              "passes": 87,
+              "fails": 0,
+              "name": "/v1/employees status is 2xx"
+            },
+            {
+              "path": "::read automotive JavaEE API endpoints::/v1/employees returns content",
+              "id": "853b5da5ee716a9edf540167f1b7099c",
+              "passes": 87,
+              "fails": 0,
+              "name": "/v1/employees returns content"
+            },
+            {
+              "passes": 87,
+              "fails": 0,
+              "name": "/v1/parts status is 2xx",
+              "path": "::read automotive JavaEE API endpoints::/v1/parts status is 2xx",
+              "id": "d9e71ff288f95070d715ee630c1bc27d"
+            },
+            {
+              "name": "/v1/parts returns content",
+              "path": "::read automotive JavaEE API endpoints::/v1/parts returns content",
+              "id": "40e955df8e334448b01de7a21a7a3836",
+              "passes": 87,
+              "fails": 0
+            },
+            {
+              "name": "/v1/service-records status is 2xx",
+              "path": "::read automotive JavaEE API endpoints::/v1/service-records status is 2xx",
+              "id": "547869cc18639aa7c57fb51bb7c13394",
+              "passes": 87,
+              "fails": 0
+            },
+            {
+              "id": "003a0cf1391b6c1f60d45df73151faa1",
+              "passes": 87,
+              "fails": 0,
+              "name": "/v1/service-records returns content",
+              "path": "::read automotive JavaEE API endpoints::/v1/service-records returns content"
+            },
+            {
+              "passes": 87,
+              "fails": 0,
+              "name": "/v1/appointments status is 2xx",
+              "path": "::read automotive JavaEE API endpoints::/v1/appointments status is 2xx",
+              "id": "7bd6fcfc9dec1386fb4999d4c62f3fee"
+            },
+            {
+              "path": "::read automotive JavaEE API endpoints::/v1/appointments returns content",
+              "id": "50f46341c871ab03b67d07652052c718",
+              "passes": 87,
+              "fails": 0,
+              "name": "/v1/appointments returns content"
+            },
+            {
+              "name": "/v1/invoices status is 2xx",
+              "path": "::read automotive JavaEE API endpoints::/v1/invoices status is 2xx",
+              "id": "34d11ea9308cab7eb4ae4a134f8a8b8d",
+              "passes": 87,
+              "fails": 0
+            },
+            {
+              "name": "/v1/invoices returns content",
+              "path": "::read automotive JavaEE API endpoints::/v1/invoices returns content",
+              "id": "cb61fa364166fcb7be3b64af12f6ae64",
+              "passes": 87,
+              "fails": 0
+            },
+            {
+              "name": "/v1/warranties status is 2xx",
+              "path": "::read automotive JavaEE API endpoints::/v1/warranties status is 2xx",
+              "id": "00033e4563f7823e06433aaed8680718",
+              "passes": 87,
+              "fails": 0
+            },
+            {
+              "fails": 0,
+              "name": "/v1/warranties returns content",
+              "path": "::read automotive JavaEE API endpoints::/v1/warranties returns content",
+              "id": "5b480bf35ed4656e98e708c25dddf596",
+              "passes": 87
+            },
+            {
+              "fails": 0,
+              "name": "/v1/users status is 2xx",
+              "path": "::read automotive JavaEE API endpoints::/v1/users status is 2xx",
+              "id": "8a6ff2211bfd4cc9249e246d584ef1da",
+              "passes": 87
+            },
+            {
+              "id": "bee61d7ce4a6adc0cd6234d80ee24a26",
+              "passes": 87,
+              "fails": 0,
+              "name": "/v1/users returns content",
+              "path": "::read automotive JavaEE API endpoints::/v1/users returns content"
+            }
+          ],
+        "name": "read automotive JavaEE API endpoints"
+      }
+    ],
+    "checks": []
+  }
+}
