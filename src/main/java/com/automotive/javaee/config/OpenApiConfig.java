@@ -12,7 +12,7 @@ import org.eclipse.microprofile.openapi.annotations.servers.Server;
         ),
         servers = {
                 @Server(
-                        url = "http://localhost:8087/ROOT",
+                        url = "https://automotive-javaee-rz01.azurewebsites.net/ROOT",
                         description = "Local Docker Server"
                 )
         }
