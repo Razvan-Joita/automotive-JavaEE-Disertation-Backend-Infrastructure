@@ -11,12 +11,16 @@ public class FlywayConfig {
 
     @PostConstruct
     public void migrate() {
+        String dbUrl = System.getenv().getOrDefault(
+                "DB_URL",
+                "jdbc:mysql://mysql:3306/automotiveJavaEE?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
+        );
+
+        String dbUser = System.getenv().getOrDefault("DB_USER", "automotive");
+        String dbPassword = System.getenv().getOrDefault("DB_PASSWORD", "Jabulani2002@");
+
         Flyway flyway = Flyway.configure()
-                .dataSource(
-                        "jdbc:mysql://mysql:3306/automotiveJavaEE?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC",
-                        "automotive",
-                        "Jabulani2002@"
-                )
+                .dataSource(dbUrl, dbUser, dbPassword)
                 .locations("classpath:db/migration")
                 .baselineOnMigrate(true)
                 .load();
